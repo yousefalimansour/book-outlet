@@ -1,0 +1,21 @@
+{% extends "book_outlet/base.html" %}
+
+{% block title %}
+    {{ book.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="book-detail">
+        <h1>{{ book.title }}</h1>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Price:</strong> ${{ book.price }}</p>
+
+        {% if book.isbest_seller %}
+            <p class="highlight">🔥 This book is a best seller!</p>
+        {% else %}
+            <p>This book is not a best seller.</p>
+        {% endif %}
+
+        <a class="back-link" href="{% url 'book_outlet:index' %}">← Back to Book List</a>
+    </div>
+{% endblock %}

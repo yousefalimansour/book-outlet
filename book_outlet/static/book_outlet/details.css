@@ -1,0 +1,65 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Book detail container */
+.book-detail {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Headings */
+.book-detail h1 {
+    font-size: 32px;
+    color: #ffcc70;
+    margin-bottom: 20px;
+}
+
+/* Author & Price */
+.book-detail p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Best seller badge */
+.highlight {
+    color: #ff6f61;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-left: 4px solid #ff6f61;
+    border-radius: 4px;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ffcc70, #ff6f61);
+    color: #121212;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255, 108, 85, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.back-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 108, 85, 0.5);
+    background: linear-gradient(135deg, #ffaa33, #ff3c3c);
+    color: #fff;
+}
+

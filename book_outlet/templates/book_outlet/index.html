@@ -1,0 +1,27 @@
+{% extends "book_outlet/base.html" %}
+
+{% block title %}
+    Main Page - Book Outlet
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Book Outlet</h1>
+    <p>Your one-stop shop for all your book needs!</p>
+    
+    <div class="book-list">
+        {% for book in books %}
+            <div class="book-item">
+                <h2>{{ book.title }}</h2>
+                <p>Author: {{ book.author }}</p>
+                <p>Price: ${{ book.price }}</p>
+            </div>
+                <div class="back-link" >
+                    <a href="{% url 'book_outlet:book_details' book.id %}">View Details</a>
+                </div>
+        {% endfor %}
+    </div>
+
+    {% if books|length == 0 %}
+        <p>No books available at the moment.</p>
+    {% endif %}
+{% endblock %}
