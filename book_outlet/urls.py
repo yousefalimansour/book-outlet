@@ -1,9 +1,9 @@
 from django.urls import path
 from . import views
-
-app_name = "book_outlet"
+# namespaces مجرد تنظيم لي 
+app_name = "book_outlet" 
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("books/<int:book_id>/", views.book_detail, name="book_details"),
+    path("books/<slug:slug>/", views.book_details, name="book_details"),
 ]

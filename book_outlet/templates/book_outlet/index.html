@@ -16,11 +16,13 @@
                 <p>Price: ${{ book.price }}</p>
             </div>
                 <div class="back-link" >
-                    <a href="{% url 'book_outlet:book_details' book.id %}">View Details</a>
+                    <a href="{{ book.get_absolute_url }}">View Details</a>
                 </div>
         {% endfor %}
     </div>
-
+    <hr>
+    <p>Total number of Books : {{ count_of_books }}  </p>
+    <p>Avrage of rating : {{ avrage_of_rating.rating__avg }}  </p>
     {% if books|length == 0 %}
         <p>No books available at the moment.</p>
     {% endif %}
